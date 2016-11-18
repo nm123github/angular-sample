@@ -1,0 +1,14 @@
+<table class="mytable">
+  
+  <tr>
+    <th ng-repeat="header in $ctrl.headers">{{header}}</th>
+  </tr>
+
+  <tr ng-repeat="row in $ctrl.rows">
+    <td>{{row.id}}</td>
+    <td>{{row.firstname}}</td>
+    <td>{{row.lastname}}</td> 
+    <td>{{row.age}}</td>
+  </tr>
+  
+</table>

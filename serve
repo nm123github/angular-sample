@@ -1,0 +1,13 @@
+# BUILD WATCH AND START SERVER
+
+sh ./build
+
+node_modules/llexec/lib/index.js \
+	'node_modules/chokidar-cli/index.js	\
+		-d 5000 \
+		"src/*.js"	\
+		"src/lib/*.js"	\
+		"src/lib/*/*.js"	\
+		"src/ui/*.js"	\
+		"src/ui/*/*.js"	-c "sh ./build"' \
+	'node server.js'

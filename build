@@ -1,0 +1,35 @@
+# BUILD webapp
+
+# directory structure
+# public
+#	assets			[images, css etc]
+#	shared-lib		[non-ui services+code shared by components]
+#	ui 				[angular ui components]
+#		component1	[component, controllers, services, tests related to component]
+#		routes		[routes for app]
+#	index.html		[main index.html which probably includes a <top-nav> and <div ui-view>]
+#	index.js		[wire everything together!]
+#	index.scss		[main index.scss file. respective scss files are part of component folders]
+
+
+PUBLIC_DIR='public-release'		# output directory
+NODE_SAAS='node_modules/node-sass/bin/node-sass'	#node-sass executable
+
+rm -rf $PUBLIC_DIR
+
+mkdir $PUBLIC_DIR
+mkdir $PUBLIC_DIR/css
+
+# if i dont say --no-mangle, app stops working!
+# how do we know source maps is in place? look at comment at the end of apps-bundle #sourceMappingURL=app-bundle.js.map
+
+node_modules/browserify-incremental/bin/cmd.js \
+	--cachefile app-bundle.cache public/index.js -t partialify -t aliasify -t require-globify -t [uglifyify --no-mangle] --debug \
+	| node_modules/exorcist/bin/exorcist.js $PUBLIC_DIR/app-bundle.js.map \
+	> $PUBLIC_DIR/app-bundle.js
+
+$NODE_SAAS node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss $PUBLIC_DIR/css/bootstrap.css
+$NODE_SAAS public/index.scss $PUBLIC_DIR/css/main.css
+
+cp ./public/index.html $PUBLIC_DIR/
+cp -R ./public/assets $PUBLIC_DIR/
