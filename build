@@ -3,7 +3,7 @@
 # directory structure
 # public
 #	assets			[images, css etc]
-#	shared-lib		[non-ui services+code shared by components]
+#	shared-lib		[non-ui code shared by components]
 #	ui 				[angular ui components]
 #		component1	[component, controllers, services, tests related to component]
 #		routes		[routes for app]
