@@ -1,5 +1,4 @@
 var moduleName = 'TopNavService';
-module.exports = moduleName;
 
 angular.module(moduleName, [])
 .factory('TopNavService', function() {
@@ -18,3 +17,5 @@ angular.module(moduleName, [])
     	}
     }
 });
+
+module.exports = moduleName;

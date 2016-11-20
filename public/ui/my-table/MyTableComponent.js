@@ -1,5 +1,4 @@
 var moduleName = 'MyTableComponent';
-module.exports = moduleName;
 
 angular.module(moduleName, [])
 .component('myTable', {
@@ -10,3 +9,6 @@ angular.module(moduleName, [])
     controller: require('./MyTableController'),
     controllerAs: '$ctrl'	
 });
+
+module.exports = moduleName;
+

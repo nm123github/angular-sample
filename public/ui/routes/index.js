@@ -1,5 +1,4 @@
 var moduleName = 'Routes';
-module.exports = moduleName;
 
 angular.module(moduleName, ['ui.router'])
 .config(function ($stateProvider, $urlRouterProvider) {
@@ -18,3 +17,5 @@ angular.module(moduleName, ['ui.router'])
     });
 
 });
+
+module.exports = moduleName;

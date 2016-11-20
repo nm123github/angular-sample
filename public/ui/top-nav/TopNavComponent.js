@@ -1,5 +1,4 @@
 var moduleName = 'TopNavComponent';
-module.exports = moduleName;
 
 angular.module(moduleName, [])
 .component('topNav', {
@@ -9,3 +8,5 @@ angular.module(moduleName, [])
     controller: require('./TopNavController'),
     controllerAs: '$ctrl'	
 });
+
+module.exports = moduleName;
