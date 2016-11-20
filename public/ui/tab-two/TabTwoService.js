@@ -1,5 +1,4 @@
 var moduleName = 'TabTwoService';
-module.exports = moduleName;
 
 angular.module(moduleName, [])
 .factory('TabTwoService', function() {
@@ -11,3 +10,5 @@ angular.module(moduleName, [])
     	}
     }
 });
+
+module.exports = moduleName;

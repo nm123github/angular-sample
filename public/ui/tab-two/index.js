@@ -1,5 +1,4 @@
 var moduleName = 'TabTwo';
-module.exports = moduleName;
 
 angular.module(moduleName, [
     require('./TabTwoComponent'),
@@ -7,3 +6,5 @@ angular.module(moduleName, [
     require('./TabTwoService'),
     require('@my-table')
 ]);
+
+module.exports = moduleName;

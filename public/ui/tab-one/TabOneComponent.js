@@ -1,5 +1,4 @@
 var moduleName = 'TabOneComponent';
-module.exports = moduleName;
 
 angular.module(moduleName, [])
 .component('tabOne', {
@@ -9,3 +8,5 @@ angular.module(moduleName, [])
     controller: require('./TabOneController'),
     controllerAs: '$ctrl'	
 });
+
+module.exports = moduleName;

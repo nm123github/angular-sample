@@ -1,5 +1,4 @@
 var moduleName = 'MyTableService';
-module.exports = moduleName;
 
 var randomservice = require('../../shared-lib/services/RandomService.js')
 
@@ -29,3 +28,5 @@ angular.module(moduleName, [])
     	}
     }
 });
+
+module.exports = moduleName;
