@@ -12,7 +12,7 @@
 #	index.scss		[main index.scss file. respective scss files are part of component folders]
 
 
-PUBLIC_DIR='public-release'		# output directory
+PUBLIC_DIR='public-release'							# output directory
 NODE_SAAS='node_modules/node-sass/bin/node-sass'	#node-sass executable
 
 rm -rf $PUBLIC_DIR
@@ -20,7 +20,7 @@ rm -rf $PUBLIC_DIR
 mkdir $PUBLIC_DIR
 mkdir $PUBLIC_DIR/css
 
-# if i dont say --no-mangle, app stops working!
+# What is --no-mangle? -t [uglifyify --no-mangle]
 # how do we know source maps is in place? look at comment at the end of apps-bundle #sourceMappingURL=app-bundle.js.map
 
 node_modules/browserify-incremental/bin/cmd.js \
