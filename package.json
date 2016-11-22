@@ -8,8 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "peerDependencies": {
-  },
+  "peerDependencies": {},
   "dependencies": {
     "aliasify": "~2.0.0",
     "angular": "~1.5.8",
@@ -42,7 +41,8 @@
     "typings": "~1.4.0",
     "uglifyify": "~3.0.4",
     "uglifyjs": "~2.4.10",
-    "uniq": "~1.0.1"
+    "uniq": "~1.0.1",
+    "watchify": "~3.7.0"
   },
   "aliasify": {
     "aliases": {
